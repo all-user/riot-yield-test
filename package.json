@@ -1,0 +1,18 @@
+{
+  "name": "riot-yield-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "ssh://git@github.com/all-user/riot-yield-test.git",
+    "type": "git"
+  },
+  "author": "Keita Okamoto <ok@aaa.email.ne.jp>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "eslint": "^3.8.1",
+    "riot": "^2.6.4",
+    "webpack": "^1.13.3"
+  }
+}
