@@ -8,10 +8,21 @@
   },
   "author": "Keita Okamoto <ok@aaa.email.ne.jp>",
   "license": "MIT",
-  "dependencies": {
-    "babel-cli": "^6.18.0",
+  "scripts": {
+    "build": "npm-run-all build:*",
+    "build:riot": "riot src/tags lib/tags",
+    "watch": "npm-run-all watch:*",
+    "watch:riot": "riot -w src/tags lib/tags",
+    "webpack": "webpack",
+    "webpack:watch": "webpack -w",
+    "start": "npm-run-all -p watch webpack:watch"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.7",
     "babel-preset-latest": "^6.16.0",
     "eslint": "^3.8.1",
+    "npm-run-all": "^3.1.1",
     "riot": "^2.6.4",
     "webpack": "^1.13.3"
   }
