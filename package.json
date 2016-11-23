@@ -18,12 +18,14 @@
     "start": "npm-run-all -p watch webpack:watch"
   },
   "devDependencies": {
+    "babel-core": "^6.18.0",
     "babel-eslint": "^7.1.0",
     "babel-loader": "^6.2.7",
     "babel-preset-latest": "^6.16.0",
     "eslint": "^3.8.1",
     "npm-run-all": "^3.1.1",
     "riot": "^2.6.4",
+    "riot-cli": "^3.0.0",
     "webpack": "^1.13.3"
   }
 }

@@ -1,28 +1,14 @@
 <app>
-  <some-box>
-    <yield to="left">
-      <custom-contents>
-        <span>left</span>
-      </custom-contents>
+  <foo>
+    <yield to="foo-content">
+      foo
     </yield>
-    <yield to="right">
-      <custom-contents>
-        <span>right</span>
-      </custom-contents>
-    </yield>
-  </some-box>
-  <outer-box>
-    <some-box>
-      <yield to="left">
-        <custom-contents>
-          <span>left</span>
-        </custom-contents>
+  </foo>
+  <bar>
+    <foo>
+      <yield to="foo-content">
+        foo
       </yield>
-      <yield to="right">
-        <custom-contents>
-          <span>right</span>
-        </custom-contents>
-      </yield>
-    </some-box>
-  </outer-box>
+    </foo>
+  </bar>
 </app>

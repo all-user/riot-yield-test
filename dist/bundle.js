@@ -2743,9 +2743,8 @@
 
 	var map = {
 		"./app.js": 4,
-		"./custom-contents.js": 5,
-		"./outer-box.js": 6,
-		"./some-box.js": 7
+		"./bar.js": 5,
+		"./foo.js": 6
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -2765,7 +2764,7 @@
 /* 4 */
 /***/ function(module, exports) {
 
-	riot.tag2('app', '<some-box> <yield to="left"> <custom-contents> <span>left</span> </custom-contents> </yield> <yield to="right"> <custom-contents> <span>right</span> </custom-contents> </yield> </some-box> <outer-box> <some-box> <yield to="left"> <custom-contents> <span>left</span> </custom-contents> </yield> <yield to="right"> <custom-contents> <span>right</span> </custom-contents> </yield> </some-box> </outer-box>', '', '', function(opts) {
+	riot.tag2('app', '<foo> <yield to="foo-content"> foo </yield> </foo> <bar> <foo> <yield to="foo-content"> foo </yield> </foo> </bar>', '', '', function(opts) {
 	});
 
 
@@ -2773,7 +2772,7 @@
 /* 5 */
 /***/ function(module, exports) {
 
-	riot.tag2('custom-contents', '<yield></yield>', '', '', function(opts) {
+	riot.tag2('bar', '<yield></yield>', '', '', function(opts) {
 	});
 
 
@@ -2781,15 +2780,7 @@
 /* 6 */
 /***/ function(module, exports) {
 
-	riot.tag2('outer-box', '<span>header</span> <yield></yield> <span>contents</span>', '', '', function(opts) {
-	});
-
-
-/***/ },
-/* 7 */
-/***/ function(module, exports) {
-
-	riot.tag2('some-box', '<div align="left"> <yield from="left"></yield> </div> <div align="right"> <yield from="right"></yield> </div>', '', '', function(opts) {
+	riot.tag2('foo', '<yield from="foo-content"></yield>', '', '', function(opts) {
 	});
 
 
